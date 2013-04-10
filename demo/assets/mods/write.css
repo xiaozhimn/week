@@ -1,0 +1,229 @@
+.page {
+    overflow: auto;
+}
+.container {
+    position: relative;
+    width: 94%;
+    max-width: 980px;
+    margin: 0.83em auto;
+}
+.container h3 {
+    margin: 1.67em 0 0.83em 0;    
+    color: #d14;
+    font-size: 1.33em;    
+}
+.container .editor {
+    width: 100%;
+    min-height: 2em;
+    cursor: text;    
+}
+.container .share:focus,
+.container .editor:focus,
+.container input:focus,
+.container select:focus {
+    outline: none;
+}
+
+
+/* email address {{{ */
+.container section:first-child ul {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 1.67em;
+    line-height: 2.5;     
+}
+.container section:first-child li {
+    display: table-row;
+    padding-left: 5em;
+}
+.container section:first-child span,
+.container section:first-child input {
+    display: table-cell;
+}
+.container section:first-child span {
+    width: 5em;    
+    text-align: right;
+}
+.container section:first-child input {
+    width: 98%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+/* END }}} */
+
+
+/* share {{{ */
+.container .share {
+    min-height: 25em;
+    padding: 0.67em;        
+    line-height: 2em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: text;
+}
+/* END }}} */
+
+/* task edit area {{{ */
+.container table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid #ddd;    
+}
+.container th, 
+.container td {
+    padding: 0.42em;
+    font-weight: normal;
+    border: 1px solid #ddd;
+    color: #666;    
+}
+.container th {
+    width: 6.5em;
+    text-align: right;
+}
+.container td {
+    line-height: 1.5;
+}
+.container .preview ul {
+    display: inline;
+    margin: 0;
+}
+.container .preview li {
+    display: inline;
+    position: relative;
+    float: left;
+    width: 11.67em;    
+    height: 11.67em;
+    overflow: hidden;    
+    margin: 1.17em 0.58em;
+    padding: 0;    
+    list-style: none;    
+    background: #f2f2f2;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;    
+}
+.container .preview li:hover span {
+    display: block;
+}
+.container .preview span {
+    display: none;    
+    position: absolute;
+    top: 0.33em;    
+    right: 0.33em;
+    width: 1.33em;
+    height: 1.33em;
+    font-size: 1em;    
+    text-align: center;
+    text-decoration: none;    
+    background: #d14;
+    border-radius: 3px;
+    color: #eee;
+    cursor: pointer;
+}
+.container .preview span:hover {
+    background: #bd0707;
+    color: #fff;
+}
+.container .preview .add {
+    background-color: transparent;
+    border: 0;
+}
+.container .preview .file {
+    width: 4.83em;
+    height: 4.83em;
+    overflow: hidden;
+    margin: 3.33em;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.container .preview .file:hover {
+    background-color: #e2e2e2;
+}
+.container .preview .file input {
+    margin-left: -3.33em;
+    cursor: pointer;
+    width: 10em;
+    height: 4.83em;
+    opacity: 0;
+}
+/* END }}} */
+
+/* save & preview button {{{ */
+.container .action .button {
+    display: inline-block;
+    position: relative;    
+    margin: 1.5em 1.5em 1.67em 0;    
+    padding: 0.5em 1.12em;
+    font: bold 1.08em \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53;    
+    background: #d14 repeat-x;        
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    border-radius: 4px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    color: #e2e2e2;    
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);     
+}
+.container .action .button:hover {
+    background-color: #d20;    
+    color: #fff;
+}
+/* END }}} */
+
+/* prev & next {{{ */
+.container .prev, 
+.container .next {
+    position: absolute;
+    top: 7.5em;    
+    width: 4em;
+    height: 4em;
+    font-weight: bold;    
+    font-size: 3em;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    color: rgba(0,0,0, 0.3);
+    cursor: pointer;    
+}
+.container .prev:hover,
+.container .next:hover {
+    color: #d14;
+}
+.container .prev {
+    left: -1em;
+}
+.container .next {
+    right: -4.5em;
+}
+/* END }}} */
+
+/* saved tip {{{ */
+.container .tip {
+    position: absolute;    
+    top: -1em;
+    right: 0;     
+    width: 10em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    opacity: 0.9;
+    background: #222;    
+    border-radius: 4px;    
+    box-shadow: #ddd -1px -1px 1px;
+    color: #fff;    
+}
+/* END }}} */
+
+
+@media screen and (max-device-width: 9.7in) {
+    .container .attachment,
+    .container .prev,
+    .container .next {
+        display: none;
+    }
+}
